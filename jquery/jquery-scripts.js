@@ -3,6 +3,10 @@ $(document).ready(() => {
     // Creates <button>, appends to #row2
     $('#row2').append('<button class="btn btn-lg btn-secondary col-6 py-2 mb-4" id="alertBtn">Click Me</button>');
 
+    $('#alertBtn').on('click', () => {
+        alert(`Hi How Are You?`);
+    })
+
     // Creates <div id="divBox">, appends to #row4 and styles it
     $('#row4').append('<div id="divBox" class="my-4"></div>');
     $('#divBox').css({
@@ -45,7 +49,7 @@ $(document).ready(() => {
 
     let spanCount = 0; // Initializing spanCount
 
-    $('#emptyDiv').append('<span class="col-12 py-4">Matthew Campbell</span>'); // Creates <span>, appends to #emptyDiv
+    $('#emptyDiv').append('<span class="col-12 py-4"><h3 class="h3">Matthew Campbell</h3></span>'); // Creates <span>, appends to #emptyDiv
     $('span').hide(); // Hides <span>!
 
     //.on('click') event handler method on #spanBtn
