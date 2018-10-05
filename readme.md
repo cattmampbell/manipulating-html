@@ -20,5 +20,5 @@
     * When the `button` is clicked, add a `span` that contains your name to the empty `div`.
 06. Create a `button` and a `ul` in your `HTML`. 
     * In JavaScript, create an array containing the names of your friends (at *least* 10). 
-    * If you don't have that many, include your imaginary ones). 
+    * If you don't have that many, include your imaginary ones. 
     * When the `button` is clicked, add each friend's name as an `li` to the `ul` on the page.
