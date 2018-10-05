@@ -39,8 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 'click' event listener on textBtn
     textBtn.addEventListener('click', () => {
-        alert(`${textArea.value}`);
-        textArea.value = ''; // Clear!
+        const userText = textArea.value;
+        alert(`"${userText}"`);
+        userText = ''; // Clear!
     })
 
     const myColors = ['#007bff', '#6c757d', '#28a745', '#dc3545', '#ffc107', '#17a2b8', '#f8f9fa'];
