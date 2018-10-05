@@ -44,18 +44,49 @@ $(document).ready(() => {
     })
 
     let spanCount = 0; // Initializing spanCount
-    $('#emptyDiv').append('<span class="col-12 py-4">Matthew Campbell</span>');
-    $('span').hide();
+
+    $('#emptyDiv').append('<span class="col-12 py-4">Matthew Campbell</span>'); // Creates <span>, appends to #emptyDiv
+    $('span').hide(); // Hides <span>!
 
     //.on('click') event handler method on #spanBtn
     $('#spanBtn').on('click', () => {
         spanCount += 1; // Adds 1 with each .on('click') 
-        // Creates <span>, appends to #emptyDiv
         if(spanCount === 1) {
             $('span').show();
         } else if(spanCount > 1) {
             $('span').hide();
             spanCount = 0;
+        }
+    })
+
+    const myFriends = [
+        'Olivia',
+        'Toast',
+        'Cody',
+        'Megan',
+        'Mona',
+        'Wyatt',
+        'Emily',
+        'George',
+        'Caleb',
+        'Lydia',
+    ];
+
+    let ulCount = 0; // Initializing ulCount
+
+    for(let i = 0; i < myFriends.length; i += 1) {
+        $('#friendUl').append(`<li class="list-group-item">${myFriends[i]}</li>`); // Creates <li>, appends to #friendsUl
+        $('#friendUl').hide(); // Hides <ul>!
+    }
+
+    //.on('click') event handler method on #ulBtn
+    $('#ulBtn').on('click', () => {
+        ulCount += 1; // Adds 1 with each .on('click') 
+        if(ulCount === 1) {
+            $('#friendUl').show();
+        } else if(ulCount > 1) {
+            $('#friendUl').hide();
+            ulCount = 0;
         }
     })
 })
