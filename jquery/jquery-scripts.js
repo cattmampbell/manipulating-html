@@ -42,4 +42,20 @@ $(document).ready(() => {
         const thisRandomColor = getRandomColor();
         $(event.target).css('color', thisRandomColor);
     })
+
+    let spanCount = 0; // Initializing spanCount
+    $('#emptyDiv').append('<span class="col-12 py-4">Matthew Campbell</span>');
+    $('span').hide();
+
+    //.on('click') event handler method on #spanBtn
+    $('#spanBtn').on('click', () => {
+        spanCount += 1; // Adds 1 with each .on('click') 
+        // Creates <span>, appends to #emptyDiv
+        if(spanCount === 1) {
+            $('span').show();
+        } else if(spanCount > 1) {
+            $('span').hide();
+            spanCount = 0;
+        }
+    })
 })
